@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --bs-danger: crimson;
+    --bs-light: #f8f9fa;
+    --bs-gray: #6c757d;
+}
+
+/* Navigation */
+.Fire-effect {
+    color: var(--bs-light) !important;
+    text-decoration: none;
+    transition: all .5s ease;
+    text-shadow: 0 0 25px var(--bs-danger), 0 0 5px var(--bs-gray);
+}
+
+.Fire-effect:Hover,.links:hover {
+    text-shadow: 4px 2px 0 var(--bs-danger);
+}
+
+.links,
+.navigation-links {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    color: var(--bs-light) !important;
+}
+
+/* Menutbtn */
+.menu-button {
+    cursor: pointer;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    z-index: 1;
+}
+
+.menu-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--bs-danger);
+    border-radius: 10px;
+}
+
+/* menubar */
+@media (max-width:992px){
+    .nav-container{
+        flex-direction: column;
+    }
+    .navigation-links{
+        position: absolute;
+        right: -3000px;
+        width: 270px;
+        flex-direction: column;
+        transition: all .3s ease;
+        background-color: black;
+    }
+
+    .navigation-links.active {
+        right: 0;
+    }
+
+    .navigation-links > a{
+        border: 1px solid var(--bs-gray);
+        width: 100%;
+        display: block;
+        transition: all .5s ease;
+        text-align: center;
+    }
+
+    .navigation-links > a:hover{
+        background-color: var(--bs-danger);
+    }
+}
+/* side navbar */
+.sidebar{
+    width: 250px;
+    position: fixed;
+    margin-top: 3.5rem;
+    margin-left: -270px;
+    transition: 0.5s ease;
+    z-index: 1;
+    border: 1px solid var(--bs-gray);
+}
+.bookmarks{
+    height: 305px;
+    overflow: auto;
+}
+.recent-blogs{
+    height: 310px;
+    overflow: auto;
+}
+/* for sidenavbar */
+.active-sidebar {
+    margin-left: 0;
+}
+/* for button*/
+.active-arrow {
+    margin-left: 240px;
+}
+
+.arrow {
+    cursor: pointer;
+    border-radius: .5rem;
+    padding: 0 2rem;
+    position: fixed;
+    top: 55px;
+    left: -1.8rem;
+    background-color: black;
+    color: #fff;
+    transition: 0.5s ease;
+    border: 2px solid white;
+    box-shadow: 0 10px 10px 0 red;
+}
+
+.arrow:hover{
+    background-color: var(--bs-danger);
+}
+
+.hr{
+    margin:3.5rem 0;
+}
+
+.forest-bg{
+    background-image: url(https://wallpaperaccess.com/full/1276362.jpg);
+    background-position: center;
+    background-repeat:repeat;
+}
